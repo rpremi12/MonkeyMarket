@@ -1,0 +1,26 @@
+html {
+    font-size: 2em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.logo img {
+    max-width: 2em;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar nav {
+    display: inline-flex;
+    flex-direction: row;
+}
+.navbar li {
+    list-style: none;
+}
