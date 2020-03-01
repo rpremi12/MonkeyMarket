@@ -137,10 +137,8 @@ ul {
 .fund-results {
     grid-column: span 3;
     justify-self: center;
-}
-
-.fund-results {
     font-size: 1.5em;
+    font-family: almaq;
 }
 
 

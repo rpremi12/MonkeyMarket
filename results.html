@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Normalizes CSS Styling across browsers -->
     <link rel="stylesheet" href="normalize.css">
+
+    <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/wyz5rzq.css">
+
+    <script type="text/javascript" src="styling.js">
+        window.onload = percentageColor()</script>
     <title>Market Monkey Home Page</title>
 </head>
 
-<body>
+<body onload = "percentageColor();">
 <div class="wrapper">
 
     <section class="navbar">
@@ -42,7 +49,7 @@
 
             <div class="result-item3">
                 <h4>Fund Growth (1-Year)</h4>
-                <p>+ 11.08%</p>
+                <p id="monkeyPercent">11.08</p>
             </div>
 
             <h3>How does that compare with the Fidelity 500 index fund?</h3>
@@ -59,7 +66,7 @@
 
             <div class="result-item3">
                 <h4>Fund Growth (1-Year)</h4>
-                <p>+ 5.10%</p>
+                <p id="indexPercent">5.10</p>
             </div>
 
             <p class="fund-results">The monkeys beat the index fund by 5.98%!</p>
