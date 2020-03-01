@@ -1,6 +1,7 @@
 
 // Takes the percentage growths of both funds and returns the better percentage in green
 // Also returns the difference in percent between the funds
+// syntax = [initial stock price, final stock price, percent growth]
 let vfinx = [259.75, 273.45, 0.0527];
 let fxaix = [97.77, 102.76, 0.0510];
 let swppx = [43, 45.31, 0.0537];

@@ -17,6 +17,14 @@ body {
     height: 100vh;
 }
 
+/* Styling links cause fuck default styles on links*/
+a {
+    text-decoration: none;
+    color: var(--main_brown);
+    font-size: inherit;
+    display: inline;
+}
+
 /* CONTENT STYLING */
 .wrapper {
     width: 100%;
@@ -218,7 +226,40 @@ button:hover {
     color: white;
 }
 
+/* CSS for about.html */
+.about-body {
+    margin: 4em auto 5em auto;
+    justify-content: center;
+    display: grid;
+    width: 80%;
+    grid-template-columns: 40% 40%;
+    grid-gap: 3em;
+}
 
+.flex-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-card h3 {
+    font-family: almaq;
+    font-size: 2em;
+    align-self: center;
+}
+
+.flex-card p {
+    margin-bottom: 0;
+}
+
+.flex-card img {
+    max-width: 250px;
+    align-self: center;
+}
+
+.bio-txt {
+    width: 80%;
+    align-self: center;
+}
 
 /* Footer styles */
 footer {
