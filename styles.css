@@ -1,9 +1,11 @@
+/* VARIABLE SETUP */
 :root {
     --main_brown: #35190A;
     --pastel_yellow: #FFECA8;
     font-family: "Futura PT";
 }
 
+/* DOCUMENT DEFAULTS */
 html {
     font-size: 32px;
     width: 100%;
@@ -15,6 +17,7 @@ body {
     height: 100vh;
 }
 
+/* CONTENT STYLING */
 .wrapper {
     width: 100%;
 }
@@ -24,6 +27,7 @@ ul {
 }
 
 .navbar {
+    z-index: 1;
     width: 100%;
     display: flex;
     position: sticky;
@@ -60,9 +64,12 @@ ul {
     padding: 0 1em 0 1em;
 }
 
+/* Styling for the main content of the site */
 .main-body {
     margin: auto;
     display: flex;
+    position: relative;
+    z-index: 0;
     flex: 1;
     flex-direction: column;
     justify-content: center;
@@ -72,6 +79,7 @@ ul {
     height: 35vmax;
 }
 
+/* Main body typography styling */
 .main-body h2 {
     margin-left: auto;
     margin-right: auto;
@@ -82,8 +90,9 @@ ul {
     margin-bottom: 1em;
 }
 
+/* Text box styling */
 .main-body input {
-    margin-bottom: 3em;
+    margin-bottom: 2.5em;
     height: 1.75em;
     border: 3px solid var(--main_brown);
     border-radius: .25em;
@@ -95,37 +104,31 @@ ul {
     color: var(--main_brown);
 }
 
+/* CSS Grid for the checkbox */
 .custom-select {
-    color: var(--main_brown);
-    line-height: 1.3;
-    padding: .6em 1.4em .5em .8em;
-    border: 3px solid var(--main_brown);
-    border-radius: .25em;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 12px;
 }
 
-.custom-select::-ms-expand {
-    display: none;
-}
-.custom-select:hover {
-    border-color: #888;
-    display: block;
-}
-.custom-select:focus {
-    border-color: #aaa;
-    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-    color: #222;
-    outline: none;
-}
-.custom-select option {
-    font-weight:normal;
+.checkbox-option {
+    justify-self: start;
+    font-size: .75em;
+    display: flex;
 }
 
-.custom-select select {
-    width: 100%;
-    border: none;
+/* Custom checkbox styling */
+.input-checkbox {
+
 }
 
+.checkbox-option p {
+    font-size: 1.3em;
+    margin-left: 10px;
+}
+
+
+/* Button styling */
 .custom-button {
     z-index: 2;
     width: 35%;
@@ -142,6 +145,8 @@ button:hover {
 }
 
 
+
+/* Footer styles */
 footer {
     width: 100%;
     display: flex;
@@ -204,8 +209,5 @@ footer {
         left: initial;
         right: initial;
     }
-
-
-
 }
 
