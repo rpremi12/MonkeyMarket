@@ -100,7 +100,7 @@ ul {
 
 .main-body input[type=text] {
     font-size: 1.3em;
-    padding: .1em .25em .1em .25em;
+    padding: .1em .25em .1em .5em;
     color: var(--main_brown);
 }
 
@@ -115,6 +115,9 @@ ul {
     justify-self: start;
     font-size: .75em;
     display: flex;
+}
+.checkbox-option input {
+    margin-top: 1.2em;
 }
 
 /* Custom checkbox styling */
