@@ -107,40 +107,73 @@ ul {
 
 /* Grid for results page */
 .results-grid {
-    margin: auto;
+    margin: 4em auto 3em auto;
     width: 50%;
     display: grid;
     grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 4em 3em 4em 3em 4em 10em;
     grid-gap: 10px;
     height: 40vmax;
 }
 
-.results-grid h2 {
-    grid-column: 2;
+.results-header-h2 {
+    display: flex;
     justify-self: center;
-    margin-bottom: 0;
+    grid-column: span 3;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: var(--main_brown);
+    border-radius: .5em;
+}
+
+.results-header-h3 {
+    grid-column: span 3;
+    display: flex;
+    align-self: end;
+}
+
+.results-grid h2 {
+    margin: auto;
+    justify-self: center;
+    grid-column: 2;
 }
 
 .results-grid h3 {
     grid-column: span 3;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .results-grid h4 {
-    margin-top: .5em;
+    margin-top: 0em;
+}
+
+.results-grid p {
+    margin: 0;
 }
 
 .result-item1 {
-    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 .fund-results {
     grid-column: span 3;
-    justify-self: center;
+    justify-content: center;
     font-size: 1.5em;
     font-family: almaq;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.fund-results p {
+    justify-content: center;
+}
+
+#resultPercent {
+    margin-top: 1.5em;
+}
 
 /* CSS Grid for the checkbox */
 .custom-select {

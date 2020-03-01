@@ -1,26 +1,32 @@
-/*console.log("stop")
 
-console.log(document.getElementById("monkeyPercent").value)
-console.log(document.getElementById("indexPercent").value)
+// Takes the percentage growths of both funds and returns the better percentage in green
+// Also returns the difference in percent between the funds
+let vfinx = [259.75, 273.45, 0.0527];
+let fxaix = [97.77, 102.76, 0.0510];
+let swppx = [43, 45.31, 0.0537];
+let bspix = [333.77, 350.94, 0.0514];
+let preix = [74.97, 78.70, 0.0497];
+let meanIndeces = [167.36, 170.23, 0.0517];
 
-let monkeyPercentage = Number(document.getElementById('monkeyPercent').value);
-let indexPercentage = Number(document.getElementById('indexPercent').value);
-*/
+
+
+
+
 function percentageColor() {
-    console.log("asdfasdfasdf");
-    let monkeyPercentage = Number(document.getElementById('monkeyPercent').value);
-    let indexPercentage = Number(document.getElementById('indexPercent').value);
-    console.log(monkeyPercentage)
-    if (monkeyPercentage >= indexPercentage) {
-        document.getElementById('monkeyPercent').style.color = "red" ;
-        document.getElementById('indexPercent').style.color = "green" ;
+    let monkeyPercentage = Number(document.getElementById('monkeyPercent').textContent);
+    let indexPercentage = Number(document.getElementById('indexPercent').textContent);
+
+    if (monkeyPercentage > indexPercentage) {
+        let diffPercentage = monkeyPercentage - indexPercentage;
+        document.getElementById('monkeyPercent').style.color = "green" ;
+        document.getElementById('indexPercent').style.color = "red" ;
+        document.getElementById("resultPercent").innerHTML = " The monkeys beat the index fund by " + diffPercentage.toFixed(2) + "%!";
     }
 
     else {
-        document.getElementById('monkeyPercent').style.color = "green" ;
-        document.getElementById('indexPercent').style.color = "red" ;
+        let diffPercentage = indexPercentage - monkeyPercentage;
+        document.getElementById('monkeyPercent').style.color = "red" ;
+        document.getElementById('indexPercent').style.color = "green" ;
+        document.getElementById("resultPercent").innerHTML = "The index fund beat the monkeys by " + diffPercentage.toFixed(2) + "%!";
     }
-
 }
-
-//percentageColor();
