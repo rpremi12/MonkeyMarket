@@ -19,9 +19,12 @@ function percentageColor() {
 
     if (monkeyPercentage > indexPercentage) {
         let diffPercentage = monkeyPercentage - indexPercentage;
+        console.log(diffPercentage);
         document.getElementById('monkeyPercent').style.color = "green" ;
         document.getElementById('indexPercent').style.color = "red" ;
         document.getElementById("resultPercent").innerHTML = " The monkeys beat the index fund by " + diffPercentage.toFixed(2) + "%!";
+        document.getElementById("resultAppreciation").innerHTML = "If you'd invested last year, your investment would've appreciated by " + monkeyPercentage.toFixed(2) + "%!";
+
     }
 
     else {

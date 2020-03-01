@@ -159,10 +159,69 @@ function generateStocks()
 
 }
 
-var randomProperty = function (obj) {
+function randomProperty(obj) 
+{
     var keys = Object.keys(obj)
     return obj[keys[ keys.length * Math.random() << 0]];
 };
+
+function whichFunds()
+{
+
+
+	vfinx = [259.75, 273.45, 0.0527];
+ 	fxaix = [97.77, 102.76, 0.0510];
+ 	swppx = [43, 45.31, 0.0537];
+ 	bspix = [333.77, 350.94, 0.0514];
+ 	preix = [74.97, 78.70, 0.0497];
+	meanIndeces = [167.36, 170.23, 0.0517];
+
+	var returnObj ={};
+
+  if(document.getElementById("vanguard").checked == true){
+  	returnObj["vanguard"] = vfinx
+  }
+   if(document.getElementById("fidelity").checked == true){
+  	returnObj["fidelity"] = fxaix
+  }
+  if(document.getElementById("schwab").checked == true){
+  	returnObj["schwab"] = bspix
+  }
+   if(document.getElementById("iShares").checked == true){
+  	returnObj["iShares"] = bspix
+  }
+    if(document.getElementById("Rowe").checked == true){
+  	returnObj["Rowe"] = preix
+  }
+    if(document.getElementById("mean").checked == true){
+  	returnObj["mean"] = meanIndeces
+  }
+
+  console.log(returnObj);
+  return returnObj;
+}
+
+
+function processInputs(){
+	
+	var results = decideStocks();
+	var funds = whichFunds();
+
+ 	console.log(results);
+	document.getElementById("monkPrev").innerHTML = results["totals"][0].toFixed(2);
+	document.getElementById("monkCurr").innerHTML = results["totals"][1].toFixed(2);
+	document.getElementById("monkeyPercent").innerHTML = results["totals"][2].toFixed(2);
+	percentageColor();
+	document.getElementById("result").style.visibility ="visible";
+	document.getElementById("result").style.display = "";
+
+	document.getElementById("listOfStocks").innerHTML = "";
+	for(var i =0; i< 30;i++)
+	{
+		document.getElementById("listOfStocks").innerHTML += (results["stocks"][i] + " ")
+	}
+	averagePercent();
+}
 
 function decideStocks()
 {
@@ -186,7 +245,7 @@ function decideStocks()
     stocks.push(tempStock["company"]);
   }
 
-  totals[2] = totals[2]/totals[0];
+  totals[2] = totals[2]/totals[0] *100;
 
   var returnObj =
   {
@@ -194,8 +253,20 @@ function decideStocks()
     "stocks": stocks
 
   }
-  console.log(returnObj)
+  //console.log(returnObj)
+
 
   return returnObj;
 
+}
+
+function averagePercent(){
+	var total=0;
+	for(var i=0; i<1000; i++){
+		total+=decideStocks()["totals"][2]
+	}
+	var improve = total/1000 - document.getElementById("indexPercent").innerHTML ;
+	console.log(improve);
+	document.getElementById("Average").innerHTML = "After running 1000 random trials, the monkeys did an average of " + improve.toFixed(2) +"% better.";
+	return total/1000 - document.getElementById("indexPercent").innerHTML 
 }
