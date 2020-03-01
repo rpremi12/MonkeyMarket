@@ -1,26 +1,158 @@
+:root {
+    --main_brown: #35190A;
+    --pastel_yellow: #FFECA8;
+    font-family: "Futura PT";
+}
+
 html {
-    font-size: 2em;
+    font-size: 32px;
+    width: 100%;
+    color: var(--main_brown);
+    flex: 1 1 auto;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    background-color: var(--pastel_yellow);
+    border-radius: 0 0 1em 1em;
 }
 
 .logo {
     display: flex;
     align-items: center;
     margin: auto;
+    font-family: almaq;
+    font-size: 1.4em;
 }
 
 .logo img {
     max-width: 2em;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: column;
-}
-
 .navbar nav {
     display: inline-flex;
     flex-direction: row;
+    padding-bottom: 1em;
+}
+
+.navbar ul {
+    display: flex;
+    margin: auto;
 }
 .navbar li {
     list-style: none;
+    padding: 0 1em 0 1em;
+}
+
+.main-body {
+    margin: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 2em 0 5em 0;
+    background-color: #FFF;
+}
+
+
+.main-body p {
+    margin-bottom: .25em;
+}
+
+.main-body input {
+    margin-bottom: 3em;
+    height: 1.75em;
+    border: 3px solid var(--main_brown);
+    border-radius: .25em;
+}
+
+.main-body input[type=text] {
+    font-size: 1.3em;
+    padding: .1em .25em .1em .25em;
+    color: var(--main_brown);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    margin-top: auto;
+    position: absolute;
+    background-color: var(--main_brown);
+    color: #FFF;
+    padding: .5em 1em 2em 3em;
+}
+
+.footer h3 {
+    margin-bottom: 0;
+}
+.footer p {
+    margin-top: .4em;
+    width: 65%;
+}
+
+/* Tablet sized screens */
+@media only screen and (min-width: 600px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-content: baseline;
+        border-radius: 0 0 .25em .25em;
+    }
+
+    .navbar nav {
+        padding-bottom: 0;
+    }
+
+    .navbar ol {
+        align-self: flex-end;
+    }
+
+    .logo {
+        align-content: flex-start;
+        margin: initial;
+        padding-left: 2em;
+    }
+
+    .logo h1 {
+        font-size: 1.3em;
+    }
+
+    .logo img {
+        width: 15%;
+    }
+
+
+
+
+    footer {
+        margin-top: auto;
+        bottom: initial;
+        left: initial;
+        right: initial;
+    }
+
+
+
+}
+
+
+/* Desktop size screens */
+@media only screen and (min-width: 992px) {
+
 }
