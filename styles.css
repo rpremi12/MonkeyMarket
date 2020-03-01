@@ -8,7 +8,6 @@ html {
     font-size: 32px;
     width: 100%;
     color: var(--main_brown);
-    flex: 1 1 auto;
 }
 
 body {
@@ -16,11 +15,16 @@ body {
     height: 100vh;
 }
 
+.wrapper {
+    width: 100%;
+}
+
 ul {
     padding-left: 0;
 }
 
 .navbar {
+    width: 100%;
     display: flex;
     position: sticky;
     flex-direction: column;
@@ -64,6 +68,7 @@ ul {
     width: 80%;
     padding: 2em 0 5em 0;
     background-color: #FFF;
+    height: 35vmax;
 }
 
 
@@ -91,6 +96,9 @@ footer {
     position: absolute;
     background-color: var(--main_brown);
     color: #FFF;
+}
+
+.footer-text {
     padding: .5em 1em 2em 3em;
 }
 
