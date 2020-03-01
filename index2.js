@@ -43,7 +43,6 @@ function randomStocks()
 function getPrice(stockTicker, keyVal)
 {
 	//Parse User Input and Get Company's Ticker
-	//var stockTicker = document.getElementById("company").value.trim().toUpperCase();
 	//Get the raw Monthly Stock Data for that company
 	var stockData = getStockData(stockTicker, keyVal);
 
@@ -117,8 +116,8 @@ function getRequiredValues(stockData)
 	}
 
 	// Gather Output Stocks and Difference
-    const currStock = stockData["Monthly Adjusted Time Series"][currDate]["5. adjusted close"];
-    const prevStock = stockData["Monthly Adjusted Time Series"][prevDate]["5. adjusted close"];
+    const currStock = Number(stockData["Monthly Adjusted Time Series"][currDate]["5. adjusted close"]);
+    const prevStock = Number(stockData["Monthly Adjusted Time Series"][prevDate]["5. adjusted close"]);
     const diffStock = Number(currStock) - Number(prevStock);
     const resultList = [prevStock, currStock, diffStock];
 
@@ -155,7 +154,48 @@ function generateStocks()
 	    wait(60000);
 	}
 
-
 	console.log(stockTable);
+  return stockTable;
+
+}
+
+var randomProperty = function (obj) {
+    var keys = Object.keys(obj)
+    return obj[keys[ keys.length * Math.random() << 0]];
+};
+
+function decideStocks()
+{
+
+  var stockTicker = Number(document.getElementById("company").value.trim());
+  var totals = [0,0,0];
+  var stocks = [];
+
+
+  for(var i =0; i<30; i++)
+  {
+    var tempStock = randomProperty(parsedStockData);
+
+    if(tempStock["diffence"] < -10){
+      i--;
+      continue;
+    }
+    totals[0] += Number(tempStock["prevPrice"]);
+    totals[1] += Number(tempStock["currPrice"]);
+    totals[2] += tempStock["diffence"];
+    stocks.push(tempStock["company"]);
+  }
+
+  totals[2] = totals[2]/totals[0];
+
+  var returnObj =
+  {
+    "totals": totals,
+    "stocks": stocks
+
+  }
+  console.log(returnObj)
+
+  return returnObj;
 
 }

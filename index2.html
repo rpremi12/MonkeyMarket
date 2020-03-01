@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Normalizes CSS Styling across browsers -->
+    <link rel="stylesheet" href="normalize.css">
+
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/wyz5rzq.css">
+
+    <script type="text/javascript" src="styling.js"></script>
+     <script type="text/javascript" src="index2.js"></script>
+     <script type ="text/javascript" src="tost.js"></script>
+
+    <title>Market Monkey Home Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <section class="navbar">
+            <div class="logo">
+                <img src="icon.png"> <h1>MonkeyMarket</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>Our Mission</li>
+                    <li>About us</li>
+                </ul>
+            </nav>
+        </section> <!-- end of navbar div-->
+
+
+        <section class="main-body"> <!-- Beginning of main-body div, main content goes here! -->
+            <h2>Sit back, and let the monkeys pick your stocks.</h2>
+
+            <p>How much money do you want to add to the monkey portfolio?</p>
+            <input id="company" type="text" placeholder="Insert investment amount (in dollars)"></input>
+
+            <p>Which index fund is competing with the monkeys?</p>
+
+            <div class="custom-select"> <!-- Select an index fund -->
+
+                    <div class="checkbox-option">
+                        <input type="checkbox">
+                        <label><p>Vanguard 500 Index Investor Share Class (VFINX)</p></label>
+                        </input>
+                    </div>
+
+
+                    <div class="checkbox-option">
+                        <input type="checkbox" class="input-checkbox">
+                        <label><p>Fidelity 500 Index Fund (FXAIX)</p></label>
+                        </input>
+                    </div>
+
+                    <div class="checkbox-option">
+                        <input type="checkbox" class="input-checkbox">
+                        <label><p>Schwab S&P 500 Index Fund (SWPPX)</p></label>
+                        </input>
+                    </div>
+
+                    <div class="checkbox-option">
+                        <input type="checkbox" class="input-checkbox">
+                        <label><p>iShares S&P 500 Index Fund (BSPAX)</p></label>
+                        </input>
+
+                    </div><div class="checkbox-option">
+                        <input type="checkbox" class="input-checkbox">
+                    <label><p>T. Rowe Price Equity Index 500 Fund (PREIX)</p></label>
+                        </input>
+                    </div>
+
+
+                    <div class="checkbox-option">
+                        <input type="checkbox" class="input-checkbox">
+                        <label><p>ALL of the funds!</p></label>
+                        </input>
+                    </div>
+
+            </div> <!-- End of selecting index fund div -->
+
+            <button  onclick="decideStocks()" class="custom-button">Release the monkeys!</button> <!-- runs the program -->
+        </section> <!-- End of main-body section -->
+
+        <footer class="footer">
+            <div class="footer-text">
+                <h3>"A blindfolded monkey throwing darts at a newspaper's financial pages could select a portfolio that would do just as well as one carefully selected by experts."</h3>
+                <p>- Burton Malkiel<br><span id="quote">Princeton University Economics Professor</span></p>
+            </div>
+        </footer>
+
+
+
+
+
+
+    </div> <!-- end of wrapper div -->
+</body>
+
+</html>
