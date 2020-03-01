@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/wyz5rzq.css">
 
     <script type="text/javascript" src="styling.js"></script>
+     <script type="text/javascript" src="index.js"></script>
+
     <title>Market Monkey Home Page</title>
 </head>
 
@@ -36,7 +38,7 @@
             <h2>Sit back, and let the monkeys pick your stocks.</h2>
 
             <p>How much money do you want to add to the monkey portfolio?</p>
-            <input type="text" placeholder="Insert investment amount (in dollars)">
+            <input id="company" type="text" placeholder="Insert investment amount (in dollars)"></input>
 
             <p>Which index fund is competing with the monkeys?</p>
 
@@ -81,7 +83,7 @@
 
             </div> <!-- End of selecting index fund div -->
 
-            <button class="custom-button">Release the monkeys!</button> <!-- runs the program -->
+            <button  onclick="getPrice()" class="custom-button">Release the monkeys!</button> <!-- runs the program -->
         </section> <!-- End of main-body section -->
 
         <footer class="footer">

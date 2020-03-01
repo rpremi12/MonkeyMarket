@@ -23,6 +23,8 @@ function getPrice()
 
 	};
 
+	console.log(returnObj);
+
    	return returnObj;
 }
 
