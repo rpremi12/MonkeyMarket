@@ -17,6 +17,14 @@ body {
     height: 100vh;
 }
 
+/* Styling links cause fuck default styles on links*/
+a {
+    text-decoration: none;
+    color: var(--main_brown);
+    font-size: inherit;
+    display: inline;
+}
+
 /* CONTENT STYLING */
 .wrapper {
     width: 100%;
@@ -107,40 +115,73 @@ ul {
 
 /* Grid for results page */
 .results-grid {
-    margin: auto;
+    margin: 4em auto 3em auto;
     width: 50%;
     display: grid;
     grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 4em 3em 4em 3em 4em 10em;
     grid-gap: 10px;
     height: 40vmax;
 }
 
-.results-grid h2 {
-    grid-column: 2;
+.results-header-h2 {
+    display: flex;
     justify-self: center;
-    margin-bottom: 0;
+    grid-column: span 3;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: var(--main_brown);
+    border-radius: .5em;
+}
+
+.results-header-h3 {
+    grid-column: span 3;
+    display: flex;
+    align-self: end;
+}
+
+.results-grid h2 {
+    margin: auto;
+    justify-self: center;
+    grid-column: 2;
 }
 
 .results-grid h3 {
     grid-column: span 3;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .results-grid h4 {
-    margin-top: .5em;
+    margin-top: 0em;
+}
+
+.results-grid p {
+    margin: 0;
 }
 
 .result-item1 {
-    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 .fund-results {
     grid-column: span 3;
-    justify-self: center;
+    justify-content: center;
     font-size: 1.5em;
     font-family: almaq;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.fund-results p {
+    justify-content: center;
+}
+
+#resultPercent {
+    margin-top: 1.5em;
+}
 
 /* CSS Grid for the checkbox */
 .custom-select {
@@ -185,7 +226,55 @@ button:hover {
     color: white;
 }
 
+/* CSS for about.html */
+.about-body {
+    margin: 4em auto 5em auto;
+    justify-content: center;
+    display: grid;
+    width: 80%;
+    grid-template-columns: 40% 40%;
+    grid-gap: 3em;
+}
 
+.about-body h2 {
+    grid-column: span 2;
+    justify-self: center;
+    margin-bottom: 0;
+}
+
+.flex-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-card h3 {
+    font-family: almaq;
+    font-size: 2em;
+    align-self: center;
+}
+
+.flex-card p {
+    margin-bottom: 0;
+}
+
+.flex-card img {
+    max-width: 250px;
+    align-self: center;
+}
+
+.bio-txt {
+    width: 80%;
+    align-self: center;
+}
+
+/* mission.html styles */
+
+.mission-img {
+    grid-column: 2;
+    max-width: 300px;
+    justify-self: center;
+    align-self: center;
+}
 
 /* Footer styles */
 footer {

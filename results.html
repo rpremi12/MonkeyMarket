@@ -21,21 +21,26 @@
 
     <section class="navbar">
         <div class="logo">
-            <img src="icon.png"> <h1>MonkeyMarket</h1>
+            <img src="icon.png"><h1><a href="#">MonkeyMarket</a></h1>
         </div>
 
         <nav>
             <ul>
-                <li>Our Mission</li>
-                <li>About us</li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="about.html">About us</a></li>
             </ul>
         </nav>
     </section> <!-- end of navbar div-->
 
 
     <section class="results-grid"> <!-- Beginning of main-body div, main content goes here! -->
-            <h2>Results</h2>
-            <h3>How would the Monkeys have done in a year?</h3>
+            <div class="results-header-h2"> <!-- Results Header div-->
+                <h2>Results</h2>
+            </div> <!-- End of Results header div -->
+
+            <div class="results-header-h3"> <!-- How would the monkeys do? -->
+                <h3>How would the Monkeys have done in a year?</h3>
+            </div>
 
             <div class="result-item1">
                 <h4>Monkey fund price (1-Year)</h4>
@@ -52,7 +57,9 @@
                 <p id="monkeyPercent">11.08</p>
             </div>
 
-            <h3>How does that compare with the Fidelity 500 index fund?</h3>
+            <div class="results-header-h3"> <!-- How would the index fund do? -->
+                <h3>How does that compare with the Fidelity 500 index fund?</h3>
+            </div>
 
             <div class="result-item1">
                 <h4>Index fund price (1-Year)</h4>
@@ -69,7 +76,10 @@
                 <p id="indexPercent">5.10</p>
             </div>
 
-            <p class="fund-results">The monkeys beat the index fund by 5.98%!</p>
+            <div class="fund-results">
+                <p id="resultPercent">Which is better, the monkey or the expert?</p>
+                <p id="resultAppreciation">If you'd invested last year, your investment would've appreciated by $NaN</p>
+            </div>
     </section>
 
     <footer class="footer">
