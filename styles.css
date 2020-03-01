@@ -29,6 +29,7 @@ ul {
     position: sticky;
     flex-direction: column;
     background-color: var(--pastel_yellow);
+    box-shadow: 0 .2em .4em  rgba(0, 0, 0, .10);
     border-radius: 0 0 1em 1em;
 }
 
@@ -65,15 +66,20 @@ ul {
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 50%;
     padding: 2em 0 5em 0;
     background-color: #FFF;
     height: 35vmax;
 }
 
+.main-body h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .main-body p {
-    margin-bottom: .25em;
+    margin-bottom: 1em;
 }
 
 .main-body input {
@@ -88,6 +94,53 @@ ul {
     padding: .1em .25em .1em .25em;
     color: var(--main_brown);
 }
+
+.custom-select {
+    color: var(--main_brown);
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    border: 3px solid var(--main_brown);
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+.custom-select::-ms-expand {
+    display: none;
+}
+.custom-select:hover {
+    border-color: #888;
+    display: block;
+}
+.custom-select:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    color: #222;
+    outline: none;
+}
+.custom-select option {
+    font-weight:normal;
+}
+
+.custom-select select {
+    width: 100%;
+    border: none;
+}
+
+.custom-button {
+    z-index: 2;
+    width: 35%;
+    height: 2em;
+    margin: 2em auto 2em auto;
+    border: none;
+    border-radius: .25em;
+    background-color: var(--pastel_yellow);
+}
+
+button:hover {
+    background-color: var(--main_brown);
+    color: white;
+}
+
 
 footer {
     width: 100%;
@@ -110,7 +163,7 @@ footer {
     width: 65%;
 }
 
-/* Tablet sized screens */
+/* Desktop + Tablet sized screens */
 @media only screen and (min-width: 600px) {
 
     html {
@@ -120,7 +173,7 @@ footer {
     .navbar {
         flex-direction: row;
         align-content: baseline;
-        border-radius: 0 0 .25em .25em;
+        border-radius: 0 0 1em 1em;
     }
 
     .navbar nav {
@@ -145,9 +198,6 @@ footer {
         width: 15%;
     }
 
-
-
-
     footer {
         margin-top: auto;
         bottom: initial;
@@ -159,8 +209,3 @@ footer {
 
 }
 
-
-/* Desktop size screens */
-@media only screen and (min-width: 992px) {
-
-}

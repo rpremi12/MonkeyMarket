@@ -19,25 +19,39 @@
 
             <nav>
                 <ul>
-                    <li>Nav Tab 1</li>
-                    <li>Nav Tab 2</li>
-                    <li>Nav Tab 3</li>
+                    <li>Our Mission</li>
+                    <li>The (code) Monkeys</li>
+                    <li>How it works</li>
                 </ul>
             </nav>
         </section> <!-- end of navbar div-->
 
-        <section class="main-body">
-                    <p>Sample Text:</p>
-                    <input type="text">
 
-                    <p>Sample Text 2:</p>
-                    <input type="text">
-        </section>
+        <section class="main-body"> <!-- Beginning of main-body div, main content goes here! -->
+            <h2>Sit back, and let the monkeys pick your stocks.</h2>
+
+            <p>How many stocks will the monkeys pick?</p>
+            <input type="text">
+
+            <p>Which index fund is competing with the monkeys?</p>
+
+            <div class="custom-select"> <!-- Select an index fund -->
+                <select name="fund">
+                    <option value="">Vanguard 500 Index Investor Share Class (VFINX)</option>
+                    <option value="">Fidelity 500 Index Fund (FXAIX)</option>
+                    <option value="">Schwab S&P 500 Index Fund (SWPPX)</option>
+                    <option value="">iShares S&P 500 Index Fund (BSPAX)</option>
+                    <option value="">T. Rowe Price Equity Index 500 Fund (PREIX)</option>
+                </select>
+            </div>
+
+            <button class="custom-button">Release the monkeys!</button> <!-- runs the program -->
+        </section> <!-- End of main-body section -->
 
         <footer class="footer">
             <div class="footer-text">
                 <h3>What is MonkeyMarket?</h3>
-                <p>MonkeyMarket aims to test the wildest financial hypothesis ever devised: Could a bunch of monkeys beat Wall Street?</p>
+                <p>MonkeyMarket aims to test the wildest financial hypothesis ever created: Could a bunch of monkeys beat Wall Street?</p>
             </div>
         </footer>
 
