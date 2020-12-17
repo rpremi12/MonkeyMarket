@@ -2,7 +2,7 @@
 :root {
     --main_brown: #35190A;
     --pastel_yellow: #FFECA8;
-    font-family: "Futura PT";
+    font-family: "Futura PT; sans-serif";
 }
 
 /* DOCUMENT DEFAULTS */
