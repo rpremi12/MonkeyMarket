@@ -2,7 +2,7 @@
 :root {
     --main_brown: #35190A;
     --pastel_yellow: #FFECA8;
-    font-family: "Futura PT; sans-serif";
+    font-family: futura-pt, sans-serif;
 }
 
 /* DOCUMENT DEFAULTS */
@@ -50,7 +50,6 @@ ul {
     display: flex;
     align-items: center;
     margin: auto;
-    font-family: almaq;
     font-size: 1.4em;
 }
 
@@ -248,7 +247,6 @@ button:hover {
 }
 
 .flex-card h3 {
-    font-family: almaq;
     font-size: 2em;
     align-self: center;
 }
@@ -338,6 +336,9 @@ footer {
 
     .logo h1 {
         font-size: 1.3em;
+        font-family: almaq-refined,sans-serif;
+        font-weight: 400;
+        font-style: normal;
     }
 
     .logo img {
